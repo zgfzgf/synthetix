@@ -22,15 +22,10 @@
 		"test:ovm": "hardhat test --use-ovm --optimizer",
 		"test:prod": "hardhat test:prod --network localhost --optimizer",
 		"test:prod:gas": "hardhat test:prod --gas --network localhost --optimizer --gas-output-file test-gas-used-prod.log",
-		"test:prod:ovm": "concurrently --kill-others --success first \"wait-port 8545 && wait-port 9545 && mocha test/optimism --timeout 900000\"",
+		"test:prod:ovm": "concurrently --kill-others --success first \"wait-port 8545 && wait-port 9545 && mocha test/optimism --timeout 1800000\"",
 		"test:deployments": "mocha test/deployments -- --timeout 15000",
 		"test:etherscan": "node test/etherscan",
 		"test:publish": "concurrently --kill-others --success first \"npx hardhat node > /dev/null\" \"wait-port 8545 && mocha test/publish --timeout 240000\""
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged && ./hooks/lint"
-		}
 	},
 	"repository": {
 		"type": "git",
