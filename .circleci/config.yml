@@ -245,7 +245,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: ENV
+      - run: env
   job-unit-tests-gas-report:
     working_directory: ~/repo
     docker:
