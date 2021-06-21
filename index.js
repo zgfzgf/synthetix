@@ -273,6 +273,7 @@ const getSource = ({
 	deploymentPath,
 } = {}) => {
 	const deployment = loadDeploymentFile({ network, useOvm, path, fs, deploymentPath });
+	console.log('hahahaha', deployment);
 	if (contract) return deployment.sources[contract];
 	else return deployment.sources;
 };
