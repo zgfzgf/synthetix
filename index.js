@@ -11,7 +11,7 @@ const data = {
 	mainnet: require('./publish/deployed/mainnet'),
 	goerli: require('./publish/deployed/goerli'),
 	'goerli-ovm': require('./publish/deployed/goerli-ovm'),
-	'local-ovm': require('./publish/deployed/local-ovm'),
+	// 'local-ovm': require('./publish/deployed/local-ovm'),
 	// 'kovan-ovm': require('./publish/deployed/kovan-ovm'),
 	'mainnet-ovm': require('./publish/deployed/mainnet-ovm'),
 	'kovan-ovm': require('./publish/deployed/kovan-ovm-futures'),
@@ -40,10 +40,10 @@ const chainIdMapping = Object.entries({
 	42: {
 		network: 'kovan',
 	},
-	420: {
-		network: 'local',
-		useOvm: true,
-	},
+	// 420: {
+	// 	network: 'local',
+	// 	useOvm: true,
+	// },
 
 	// Hardhat fork of mainnet: https://hardhat.org/config/#hardhat-network
 	31337: {
